@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import styles from "./Home.module.css";
+import styles from "./Home.module.scss";
 
 export const IndexContainer: NextPage = () => {
   const { push } = useRouter();
