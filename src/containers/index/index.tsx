@@ -3,9 +3,9 @@ import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import styles from "../styles/Home.module.css";
+import styles from "./Home.module.css";
 
-const Home: NextPage = () => {
+export const IndexContainer: NextPage = () => {
   const { push } = useRouter();
 
   useEffect(() => {
@@ -76,5 +76,3 @@ const Home: NextPage = () => {
     </div>
   );
 };
-
-export default Home;

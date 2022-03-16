@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Results = () => {
+export const ResultsContainer = () => {
   return (
     <div>
       <div>hello</div>
