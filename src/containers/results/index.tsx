@@ -1,13 +1,14 @@
 import React from "react";
-import { ResultsLayout } from "../../layouts/results";
+import { SidebarLayout } from "../../layouts/sidebar";
 import styles from "./results.module.scss";
+import { Sort } from "./sort";
 
 export const ResultsContainer = () => {
   return (
-    <ResultsLayout>
+    <SidebarLayout sidebar={<Sort />}>
       <div>
         <div>hello</div>
       </div>
-    </ResultsLayout>
+    </SidebarLayout>
   );
 };
