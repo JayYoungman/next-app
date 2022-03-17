@@ -1,0 +1,45 @@
+@import "../../../../styles/variables.scss";
+
+.listing {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.listingLeft {
+  width: 60%;
+}
+
+.listingImage {
+  background: 50% / cover no-repeat;
+  height: 277px;
+}
+
+.listingRight {
+  width: 40%;
+  padding: 2%;
+  p {
+    margin-bottom: 4px;
+  }
+}
+
+.listingTitle {
+  color: $primary-text-color;
+  margin-bottom: 6px;
+}
+
+.listingLocationText {
+  color: $lightGray;
+  margin: 0;
+  font-size: 13px;
+}
+
+.listingButtonPrice {
+  font-size: 24px;
+  font-weight: bold;
+  display: block;
+}

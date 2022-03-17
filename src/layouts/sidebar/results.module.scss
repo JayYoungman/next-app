@@ -1,10 +1,24 @@
-.container {
+.page {
   background: url("../../../public/images/background.png") repeat-x center
     center fixed;
   min-height: 100vh;
+  width: 100%;
+}
+
+.container {
   display: flex;
   flex: 1;
   overflow-y: hidden;
   justify-content: space-between;
   padding: 4%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sidebar {
+  width: 28%;
+}
+
+.main {
+  width: 70%;
 }

@@ -1,0 +1,47 @@
+{
+  "data": [
+    {
+      "title": "Iberostar Grand Salome",
+      "location": "Costa Adeje, Tenerife",
+      "stars": 5,
+      "party": {
+        "adults": 2,
+        "children": 2,
+        "infants": 1
+      },
+      "startDate": "3rd July 2019",
+      "duration": "7 days",
+      "departingLocation": "East Midlands",
+      "thumbnailUrl": "/images/hotel-image-1.png",
+      "price": "£1,136,50"
+    },
+    {
+      "title": "Aguamarina Golf Hotel",
+      "location": "Costa Adeje, Tenerife",
+      "stars": 5,
+      "party": {
+        "adults": 2,
+        "children": 1
+      },
+      "startDate": "27th May 2019",
+      "duration": "7 days",
+      "departingLocation": "East Midlands",
+      "thumbnailUrl": "/images/hotel-image-2.png",
+      "price": "£696.80"
+    },
+    {
+      "title": "Las Piramides Resort",
+      "location": "Costa Adeje, Tenerife",
+      "stars": 5,
+      "party": {
+        "adults": 2,
+        "children": 2
+      },
+      "startDate": "3rd July 2019",
+      "duration": "7 days",
+      "departingLocation": "East Midlands",
+      "thumbnailUrl": "/images/hotel-image-3.png",
+      "price": "£499.99"
+    }
+  ]
+}

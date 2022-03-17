@@ -9,8 +9,10 @@ export const SidebarLayout = ({
   children,
   sidebar,
 }: PropsWithChildren<SidebarLayoutProps>) => (
-  <section className={styles.container}>
-    <aside>{sidebar}</aside>
-    <section>{children}</section>
-  </section>
+  <div className={styles.page}>
+    <section className={styles.container}>
+      <aside className={styles.sidebar}>{sidebar}</aside>
+      <section className={styles.main}>{children}</section>
+    </section>
+  </div>
 );
