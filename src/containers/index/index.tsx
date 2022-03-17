@@ -9,7 +9,7 @@ export const IndexContainer: NextPage = () => {
   const { push } = useRouter();
 
   useEffect(() => {
-    push("results");
+    // push("results");
   });
 
   return (
