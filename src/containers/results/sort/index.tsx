@@ -11,8 +11,6 @@ import {
 export const Sort = () => {
   const { sortBy, setSortBy } = useContext(ResultsContext);
 
-  console.log("sortBy", sortBy);
-
   return (
     <>
       <button
