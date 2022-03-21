@@ -1,4 +1,4 @@
-@import "../../../../styles/variables.scss";
+@import "../../../../../styles/variables.scss";
 
 .listing {
   background: white;
@@ -23,19 +23,23 @@
   width: 40%;
   padding: 2%;
   p {
-    margin-bottom: 4px;
+    margin-bottom: 6px;
   }
 }
 
 .listingTitle {
   color: $primary-text-color;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .listingLocationText {
   color: $lightGray;
   margin: 0;
   font-size: 13px;
+}
+
+.listingButton {
+  margin-top: 24px;
 }
 
 .listingButtonPrice {

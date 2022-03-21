@@ -6,4 +6,10 @@
   border: none;
   padding: 4%;
   color: $primary-text-color;
+  border-radius: 6px;
+  transition: 0.3s background-color ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background-color: darken($primary-bg-color, 10%);
+  }
 }

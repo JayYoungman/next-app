@@ -3,8 +3,9 @@ import styles from "./button.module.scss";
 
 interface ButtonProps {
   children: ReactNode;
+  className: string;
 }
 
-export const Button = ({ children }: ButtonProps) => {
-  return <button className={styles.button}>{children}</button>;
-};
+export const Button = ({ className, children }: ButtonProps) => (
+  <button className={`${styles.button} ${className}`}>{children}</button>
+);
