@@ -3,7 +3,7 @@ import styles from "./button.module.scss";
 
 interface ButtonProps {
   children: ReactNode;
-  className: string;
+  className?: string;
 }
 
 export const Button = ({ className, children }: ButtonProps) => (

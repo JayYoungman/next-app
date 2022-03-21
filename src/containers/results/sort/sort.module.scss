@@ -14,7 +14,15 @@
     border-top: none;
   }
 }
+.icon {
+  color: $lightGray;
+  float: right;
+}
+
 .active {
   background-color: $secondary-bg-color;
   color: white;
+  .icon {
+    color: white;
+  }
 }
