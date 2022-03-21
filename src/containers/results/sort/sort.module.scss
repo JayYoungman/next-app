@@ -1,0 +1,19 @@
+@import "../../../../styles/variables.scss";
+
+.button {
+  background: white;
+  font-size: 16px;
+  padding: 16px;
+  color: $primary-text-color;
+  border: none;
+  border-top: 2px solid $secondary-bg-color;
+  text-align: left;
+  width: 100%;
+  &:first-child {
+    border-top: none;
+  }
+}
+.active {
+  background-color: $secondary-bg-color;
+  color: white;
+}

@@ -1,33 +1,47 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./listings.module.scss";
 import { Button } from "../../../components/button";
 import results from "./data.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { ResultsContext } from "../context";
 
 interface ResultsData {
-  data: Array<{
-    title: string;
-    location: string;
-    stars: number;
-    party: PartyData;
-    startDate: string;
-    duration: string;
-    departingLocation: string;
-    thumbnailUrl: string;
-    price: string;
-  }>;
+  data: ResultData[];
 }
-
+interface ResultData {
+  title: string;
+  location: string;
+  stars: number;
+  party: PartyData;
+  startDate: string;
+  duration: string;
+  departingLocation: string;
+  thumbnailUrl: string;
+  price: string;
+}
 interface PartyData {
   adults: number;
   children?: number;
   infants?: number;
 }
-export const Listings = () => {
-  const { data }: ResultsData = results;
 
-  console.log("data", data);
+const sortResults = (data: ResultData[], sortBy: string) => {
+  if (sortBy === "price") {
+    return data.sort((a, b) => a.price.localeCompare(b.price));
+  }
+
+  if (sortBy === "rating") {
+    return data.sort((a, b) => b.stars - a.stars);
+  }
+
+  return data.sort((a, b) => a.title.localeCompare(b.title));
+};
+
+export const Listings = () => {
+  const { sortBy } = useContext(ResultsContext);
+  const { data }: ResultsData = results;
+  const sortedResults = sortResults(data, sortBy);
 
   const renderPartyText = (party: PartyData): string => {
     const { adults, children, infants } = party;
@@ -49,8 +63,8 @@ export const Listings = () => {
 
     const stars: Array<JSX.Element> = [];
 
-    indexes.forEach(() => {
-      stars.push(<FontAwesomeIcon icon={faStar} />);
+    indexes.forEach((_, index) => {
+      stars.push(<FontAwesomeIcon key={index.toString()} icon={faStar} />);
     });
 
     return stars;
@@ -58,7 +72,7 @@ export const Listings = () => {
 
   return (
     <>
-      {data.map((result) => (
+      {sortedResults.map((result) => (
         <div key={result.title} className={styles.listing}>
           <div className={styles.listingLeft}>
             <div
