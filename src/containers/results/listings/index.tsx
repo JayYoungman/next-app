@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./listings.module.scss";
 import { Button } from "../../../components/button";
 import results from "./data.json";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 interface ResultsData {
   data: Array<{
@@ -42,6 +44,18 @@ export const Listings = () => {
     return text;
   };
 
+  const renderStars = (rating: number) => {
+    const indexes = new Array(rating).fill("");
+
+    const stars: Array<JSX.Element> = [];
+
+    indexes.forEach(() => {
+      stars.push(<FontAwesomeIcon icon={faStar} />);
+    });
+
+    return stars;
+  };
+
   return (
     <>
       {data.map((result) => (
@@ -55,7 +69,10 @@ export const Listings = () => {
           <div className={styles.listingRight}>
             <h2 className={styles.listingTitle}>{result.title}</h2>
             <p className={styles.listingLocationText}>{result.location}</p>
-            <p>{result.stars} stars</p>
+            <div className={styles.listingRating}>
+              {renderStars(result.stars)}
+            </div>
+
             <p>{renderPartyText(result.party)}</p>
             <p>
               {result.startDate} for {result.duration}

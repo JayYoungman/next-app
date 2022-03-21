@@ -43,3 +43,10 @@
   font-weight: bold;
   display: block;
 }
+
+.listingRating {
+  margin: 12px 0;
+  svg {
+    color: $primary-bg-color;
+  }
+}
