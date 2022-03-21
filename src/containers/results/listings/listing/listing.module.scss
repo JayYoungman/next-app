@@ -17,7 +17,7 @@
 
 .listingImage {
   background: 50% / cover no-repeat;
-  height: 277px;
+  height: 100%;
 }
 
 .listingRight {
@@ -62,11 +62,13 @@
   background: white;
   padding: 12px 24px;
   cursor: pointer;
+  width: 240px;
 }
 
 .listingReadMoreIcon {
   font-weight: bold;
-  margin-left: 12px;
+  position: absolute;
+  right: 12px;
 }
 
 .listingContent {
