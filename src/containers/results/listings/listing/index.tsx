@@ -3,9 +3,7 @@ import styles from "./listing.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faStar,
-  faCircleChevronRight,
   faChevronDown,
-  faChevronCircleRight,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "../../../../components/button";
@@ -82,7 +80,9 @@ export const Listing = ({ result }: ListingProps) => {
           />
         </div>
         <div className={styles.listingRight}>
-          <h2 className={styles.listingTitle}>{title}</h2>
+          <h2 className={styles.listingTitle} data-testid="listing-title">
+            {title}
+          </h2>
           <p className={styles.listingLocationText}>{location}</p>
           <div className={styles.listingRating}>{renderStars()}</div>
           <p>{renderPartyText()}</p>
