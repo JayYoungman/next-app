@@ -22,6 +22,7 @@ export const Sort = () => {
       </button>
       <button
         className={`${styles.button} ${sortBy === "price" && styles.active}`}
+        data-testid="sortby-price"
         onClick={() => setSortBy("price")}
       >
         sort by <strong>price</strong>
@@ -29,6 +30,7 @@ export const Sort = () => {
       </button>
       <button
         className={`${styles.button} ${sortBy === "rating" && styles.active}`}
+        data-testid="sortby-rating"
         onClick={() => setSortBy("rating")}
       >
         sort by <strong>star rating</strong>

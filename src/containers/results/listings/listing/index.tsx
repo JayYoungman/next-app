@@ -79,7 +79,7 @@ export const Listing = ({ result }: ListingProps) => {
             style={{ backgroundImage: `url('${thumbnailUrl}')` }}
           />
         </div>
-        <div className={styles.listingRight}>
+        <div className={styles.listingRight} data-testid="listing">
           <h2 className={styles.listingTitle} data-testid="listing-title">
             {title}
           </h2>
